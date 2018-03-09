@@ -16,8 +16,8 @@
 
 def largest_number (number_1, number_2)
   if number_1 > number_2
-    return number_1
+    number_1
   else
-    return number_2
+    number_2
   end
 end
