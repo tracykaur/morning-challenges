@@ -15,5 +15,5 @@
 #
 
 def sum_numbers (numbers)
-  # Your code here
+  sum = numbers.reduce :+
 end
