@@ -12,8 +12,12 @@
 #
 # Check your solution by running the tests:
 # ruby tests/03_sum_numbers_test.rb
-#
 
-def sum_numbers (numbers)
+def sum_numbers(numbers=[100, 534, 976, 2.3])
   # Your code here
+  @total = 0
+  numbers.each do |items|
+    @total += items
+  end
+  return @total
 end
