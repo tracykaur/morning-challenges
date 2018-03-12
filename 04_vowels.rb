@@ -15,5 +15,13 @@
 #
 
 def vowels (string)
-  # Your code here
+  vowels = ["a", "e", "i", "o", "u"]
+  vowels_cap = ["A", "E", "I", "O", "U"]
+  vowels_in_string = Array.new
+  string.split("").each do |letter|
+    if (vowels.include? letter) || (vowels_cap.include? letter)
+      vowels_in_string.push(letter)
+    end
+  end
+  vowels_in_string
 end
