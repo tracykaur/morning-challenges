@@ -15,5 +15,11 @@
 #
 
 def vowels (string)
-  # Your code here
+  v = []
+  string.chars.to_a.each do |x|
+    if x =~ /[aeiouAEIOU]/
+      v << x
+    end
+  end
+  return v
 end
