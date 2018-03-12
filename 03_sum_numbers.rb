@@ -13,7 +13,18 @@
 # Check your solution by running the tests:
 # ruby tests/03_sum_numbers_test.rb
 #
+#
+# print "1st number: "
+# num3 = gets.chomp.to_i
+# print "1st number: "
+
+
 
 def sum_numbers (numbers)
-  # Your code here
+  total = 0
+  numbers.each do |value|
+    total += value
+
+  end
+  total
 end
