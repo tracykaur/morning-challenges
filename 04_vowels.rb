@@ -14,6 +14,6 @@
 # ruby tests/04_vowels_test.rb
 #
 
-def vowels (string)
-  # Your code here
+def vowels(string)
+  # still need to solve this!
 end
