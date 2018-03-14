@@ -21,7 +21,7 @@ def count_letters (string)
     result[c] = 1 if result[c] == nil
   end
   result # return the hash
-end
+end 
 
 # string = "hello world got milk"
 
