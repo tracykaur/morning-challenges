@@ -36,11 +36,24 @@
 
 # refactored
 
+# def count_letters (string)
+#   result = {}
+#   string.each_char do |x|
+#     result[x] = 0 if !result[x]
+#     result[x] += 1
+#   end
+#   result
+# end
+
 def count_letters (string)
   result = {}
-  string.each_char do |x|
-    result[x] = 0 if !result[x]
-    result[x] += 1
-  end
+  string.scan(/.*/i) { |x| result[x] = 0 if !result[x] }
+  string.scan(/.*/i) { |x| result[x] += 1 }
+
+# end
+  # do |x|
+  #   result[x] = 0 if !result[x]
+  #   result[x] += 1
+  # end
   result
 end
