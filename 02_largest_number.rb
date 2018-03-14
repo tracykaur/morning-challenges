@@ -16,4 +16,9 @@
 
 def largest_number (number_1, number_2)
   # Your code here
+  if number_1 > number_2
+    puts number_1
+  else
+    puts number_2
+  end
 end
