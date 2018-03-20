@@ -21,5 +21,20 @@
 #
 
 class Dictionary
-  # Your code here
+  attr_reader :dictionary_hash
+  def initialize
+    @dictionary_hash = Hash.new
+  end
+
+  def add_word(word, definition)
+    dictionary_hash[word] = definition
+  end
+
+  def lookup(word)
+    dictionary_hash[word]
+  end
+
+  def total_words
+    dictionary_hash.length
+  end
 end
