@@ -19,5 +19,7 @@
 #
 
 def unique (mylist)
-  # Your code here
+  new_array = []
+  mylist.each { |item| new_array.push item if !new_array.include?(item) }
+  return new_array
 end
