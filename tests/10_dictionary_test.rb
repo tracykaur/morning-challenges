@@ -8,6 +8,7 @@ class UniqueTest < Test::Unit::TestCase
       dictionary.add_word('ruby', 'A precious stone')
     end
   end
+
   def test_dictionary_total_words
     dictionary = Dictionary.new
     dictionary.add_word('ruby', 'A precious stone')
