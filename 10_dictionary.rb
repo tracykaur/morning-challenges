@@ -14,7 +14,7 @@
 # dictionary = Dictionary.new
 # dictionary.add_word('ruby', 'A precious stone')
 # dictionary.total_words -> should return 1
-# dictionary.lookup('ruby') -> should return 'A previous stone'
+# dictionary.lookup('ruby') -> should return 'A precious stone'
 #
 # Check your solution by running the tests:
 # ruby tests/10_dictionary_test.rb
