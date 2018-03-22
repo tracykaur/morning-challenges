@@ -24,14 +24,21 @@
 #
 
 def nthFibonacci (n)
-  n1 = 0
-  n2 = 1
+  # n1 = 0
+  # n2 = 1
   x = 0
+  # while x < n
+  # n3 = n2 + n1
+  # n1 = n2
+  # n2 = n3
+  # x += 1
+  # end
+  fib = [0, 1]
   while x < n
-  n3 = n2 + n1
-  n1 = n2
-  n2 = n3
-  x += 1
+    fib.push(fib[-1] + fib[-2])
+    x += 1
   end
-  n1
+  fib[-2]
 end
+
+puts nthFibonacci (6)
