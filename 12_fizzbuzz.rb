@@ -27,3 +27,6 @@
 #
 
 # Your code here
+(1..100).each do |num|
+  num % 3 == 0 ? (num % 5 == 0 ? (puts "FizzBuzz") : (puts "Fizz")) : (num % 5 == 0 ? (puts "Buzz") : (puts num))
+end
