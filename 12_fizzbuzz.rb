@@ -27,3 +27,10 @@
 #
 
 # Your code here
+counter = 0
+while counter <= 100
+  counter += 1
+  print "Fizz" if counter %3 == 0
+  print counter %5 == 0 ? "Buzz" : counter
+  puts ""
+end
