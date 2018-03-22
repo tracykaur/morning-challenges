@@ -24,5 +24,14 @@
 #
 
 def nthFibonacci (n)
-  # Your code here    
+  n1 = 0
+  n2 = 1
+  x = 0
+  while x < n
+  n3 = n2 + n1
+  n1 = n2
+  n2 = n3
+  x += 1
+  end
+  n1
 end
