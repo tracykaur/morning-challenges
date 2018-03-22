@@ -24,5 +24,18 @@
 #
 
 def nthFibonacci (n)
-  # Your code here    
+  fs = [0,1]
+  if n == 0 || n == 1
+    return fs[n]
+  else
+    count = 1
+    (n-1).times do
+      fs.push(fs[count] + fs[(count - 1)])
+      count += 1
+    end
+    fs[n]
+  end
 end
+
+
+# nthFibonacci(6)
