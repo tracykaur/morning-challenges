@@ -21,5 +21,31 @@
 #
 
 class Dictionary
-  # Your code here
+
+  def initialize
+    $hash = {}
+  end
+
+  def add_word(word, definition)
+    $hash[word] = definition
+  end
+
+  def lookup(word)
+    $hash[word]
+  end
+
+  def total_words
+    count = 0
+    $hash.each do |x|
+      count += 1
+    end
+    count
+  end
 end
+
+dictionary = Dictionary.new
+dictionary.add_word('ruby', 'A precious stone')
+
+# puts $hash
+# puts dictionary.lookup("ruby")
+# dictionary.total_words
