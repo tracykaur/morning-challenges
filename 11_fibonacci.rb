@@ -13,7 +13,7 @@
 #
 # Difficulty:
 # 6/10
-#
+# return nthFibonacci(n-1) + nthFibonacci(n-2);
 # Example:
 # nthFibonacci(0) -> 0
 # nthFibonacci(3) -> 2
@@ -23,6 +23,11 @@
 # ruby tests/11_fibonacci_test.rb
 #
 
-def nthFibonacci (n)
-  # Your code here    
+def nthFibonacci(n)
+  # Your code here
+  if (n <= 1)
+    return n
+  else
+    return nthFibonacci(n - 1) + nthFibonacci(n - 2)
+  end
 end
