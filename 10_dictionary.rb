@@ -21,5 +21,34 @@
 #
 
 class Dictionary
-  # Your code here
+  def initialize
+    @dict_hash = {}
+  end
+
+  def add_word(word, definition)
+    # print "Input a word: "
+    # word = gets.chomp.downcase
+    # puts ""
+    # print "Definition of word: "
+    # definition = gets.chomp.downcase
+    @dict_hash[word] = definition
+  end
+
+  def lookup(word)
+    # print "Enter a word to look up: "
+    # requested-word = gets.chomp.downcase
+    # puts ""
+    if @dict_hash[requested-word] != nil
+      return @dict_hash[requested-word]
+    end
+  end
+
+  def total_words
+    hash_count = 0
+    @dict_hash.each do |key|
+      hash_count += 1
+    end
+    puts "There are #{hash_count} words"
+  end
+
 end
