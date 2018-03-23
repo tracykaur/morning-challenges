@@ -27,10 +27,20 @@
 #
 
 # Your code here
-counter = 0
-while counter <= 100
-  counter += 1
-  print "Fizz" if counter %3 == 0
-  print counter %5 == 0 ? "Buzz" : counter
-  puts ""
+def fizz_buzz(n)
+  counter = 1
+  arr = []
+  while counter <= n
+    if counter %3 == 0 && counter %5 == 0
+      arr.push("FizzBuzz")
+    elsif counter %3 == 0
+      arr.push("Fizz")
+    elsif counter %5 == 0
+      arr.push("Buzz")
+    else
+     arr.push(counter)
+   end
+   counter += 1
+  end
+  return arr[-1]
 end
