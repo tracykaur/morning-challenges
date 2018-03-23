@@ -16,14 +16,23 @@
 #
 # Difficulty:
 # 4/10
-#
-# Example:
-# 1
-# 2
-# Fizz
-# 4
-# Buzz
-# ...etc
-#
 
-# Your code here
+def fizz_buzz (n)
+  list = []
+  count = 1
+  100.times do
+    if count % 3 == 0 && count % 5 == 0
+      list.push("FizzBuzz")
+    elsif count % 3 == 0
+      list.push("Fizz")
+    elsif count % 5 == 0
+      list.push("Buzz")
+    else
+    list.push(count)
+    end
+    count += 1
+  end
+  list[-1]
+end
+
+# fizz_buzz(15)
