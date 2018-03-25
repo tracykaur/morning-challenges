@@ -24,5 +24,26 @@
 #
 
 def nthFibonacci (n)
-  # Your code here    
+  
+  if n == 0
+    return 0
+  end
+
+  i = 0
+
+  sequence = Array.new
+
+  sequence.push(i)
+
+  i += 1
+
+  sequence.push(i)
+
+  while i < n do
+    sequence[i+1] = (sequence[-1]) + (sequence[-2])
+
+    i += 1
+  end
+
+  sequence[-1]
 end
