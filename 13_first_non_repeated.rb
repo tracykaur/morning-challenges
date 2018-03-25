@@ -11,7 +11,7 @@
 # indentation and be consistent in your decisions
 # (e.g. stick to single or double quotes)
 #
-# Difficulty: ~6/10 (Varies depending on solution. 
+# Difficulty: ~6/10 (Varies depending on solution.
 # The more optimised the solution, the more difficult
 # the algorithm.)
 #
@@ -31,6 +31,12 @@
 #
 
 def firstNonRepeat (string)
-  # Your code here
-  # Whiteboard first!
+  arr = string.split('')
+  arr.each do |char|
+    if string.count(char) == 1
+      return char
+      break
+    end
+  end
+  return false
 end
