@@ -11,7 +11,7 @@
 # indentation and be consistent in your decisions
 # (e.g. stick to single or double quotes)
 #
-# Difficulty: ~6/10 (Varies depending on solution. 
+# Difficulty: ~6/10 (Varies depending on solution.
 # The more optimised the solution, the more difficult
 # the algorithm.)
 #
@@ -31,6 +31,7 @@
 #
 
 def firstNonRepeat (string)
-  # Your code here
-  # Whiteboard first!
+  hash = {}
+  string.each_char { |char| hash.has_key?(char) ? hash[char] += 1 : hash[char] = 1 }
+  hash.has_value?(1) ? hash.key(1) : false
 end
