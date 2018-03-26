@@ -23,6 +23,7 @@
 
 def in_array_advanced (needle, haystack, strict)
   # Your code here
+<<<<<<< HEAD
   haystack.each do |item|
     if strict == true
       return true if needle == item
@@ -31,4 +32,6 @@ def in_array_advanced (needle, haystack, strict)
     end
   end
   return false
+=======
+>>>>>>> 3118cf1aa9777a1b26e725cf9b6ff92b05be0816
 end
