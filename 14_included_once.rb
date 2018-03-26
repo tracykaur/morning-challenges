@@ -18,6 +18,24 @@
 # ruby tests/14_included_once_test.rb
 #
 
+# def includedOnce (haystack, needle)
+#   hash = {}
+#   haystack.each { |string| hash.has_key?(string) ? hash[string] += 1 : hash[string] = 1 }
+#   hash[needle] == 1 ? true : false
+# end
+
 def includedOnce (haystack, needle)
-  # Your code here
+  hash = {}
+  haystack.each do |string|
+    if hash.has_key?(string)
+      hash[string] += 1
+    else
+      hash[string] = 1
+    end
+  end
+  if hash[needle] == 1
+    return true
+  else
+    return false
+  end
 end
