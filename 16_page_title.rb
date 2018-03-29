@@ -11,7 +11,9 @@
 # Check your answers by running the tests:
 # ruby tests/16_page_title_test.rb
 #
+require 'open-uri'
 
 def pageTitle(url)
-  # your code here
+  open(url).read =~ /<title>(.*?)<\/title>/
+  return $1
 end
