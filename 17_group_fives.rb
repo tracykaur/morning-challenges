@@ -11,3 +11,15 @@
 # Let the tests help you :)
 # ruby tests/17_group_fives_test.rb
 #
+
+def divisible_by_five(number)
+  number % 5 == 0
+end
+
+def group_fives(number_array)
+  new_array = [[],[]]
+  number_array.each do |number|
+    divisible_by_five(number) ? new_array[0].push(number) : new_array[1].push(number)
+  end
+  return new_array
+end
