@@ -21,3 +21,12 @@
 # water sell for $6, and cost $0.15 to make
 
 # print out the total profit for the orders you have
+
+drinks_on_order = {'cocktail' => 3, 'water' => 2, 'beer' = 6}
+
+loop do
+puts "What would you like"
+order = gets.chomp
+drinks_on_order["#{order}"] += 1
+puts drinks_on_order
+end
