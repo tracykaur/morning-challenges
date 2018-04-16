@@ -22,11 +22,15 @@
 
 # print out the total profit for the orders you have
 
-drinks_on_order = {'cocktail' => 3, 'water' => 2, 'beer' = 6}
+drinks_on_order = {'cocktail' => 3, 'water' => 2, 'beer' => 6}
 
 loop do
-puts "What would you like"
-order = gets.chomp
-drinks_on_order["#{order}"] += 1
-puts drinks_on_order
+  puts "What would you like"
+  order = gets.chomp
+  drinks_on_order["#{order}"] += 1
+  puts drinks_on_order
 end
+
+puts ((drinks_on_order['cocktail'] * 22) - (drinks_on_order['cocktail'] * 8) +
+     (drinks_on_order['water'] * 3) - (drinks_on_order['water'] * 0.15) +
+     (drinks_on_order['beer'] * 12) - (drinks_on_order['beer'] * 3))
