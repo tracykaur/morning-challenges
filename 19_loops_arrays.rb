@@ -21,3 +21,37 @@
 # water sell for $6, and cost $0.15 to make
 
 # print out the total profit for the orders you have
+
+time_took_coming_to_class = 15
+puts "I rode my bike to school today and it took me #{time_took_coming_to_class} minutes."
+
+cocktails = 3
+waters = 2
+beers = 6
+
+loop do
+  system('clear')
+  puts "_________________________________________"
+  puts "Final drinks order: cocktails *#{cocktails}"
+  puts "                    beers     *#{beers}"
+  puts "                    waters    *#{waters}"
+  puts "_________________________________________"
+  puts "Would you like a beer, cocktail or water?"
+  puts "Cocktail[1]"
+  puts "Beer [2]"
+  puts "Water[3]"
+  puts "_________________________________________"
+  input = gets.chomp
+  case
+  when input == 1
+    cocktails += 1
+
+  when input == 2
+    beers += 1
+
+
+  when input == 3
+    waters += 1
+
+  end
+end
