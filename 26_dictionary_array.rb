@@ -24,5 +24,19 @@
 #
 
 class Dictionary
-  # Your code here
+  def initialize
+    @words = []
+    @definitions = []
+  end
+  def add_word(word, definition)
+    @words.push(word)
+    @definitions.push(definition)
+  end
+  def lookup(word)
+    index = @words.index(word)
+    @definitions[index]
+  end
+  def total_words
+    @words.length
+  end
 end
