@@ -20,53 +20,33 @@
 # and power, make is so that the maximum health value for a player is 200, and
 # the maximum power value is 25) and call the fight method.
 
-class Player
+class Players
 
   def initialize(player1, player2)
-    @p1_name = player1
-    @p1_power = rand(5..25)
-    @p1_health = rand(50..200)
-
-    @p2_name = player2
-    @p2_power = rand(5..25)
-    @p2_health = rand(50..200)
+    @p1 = {name: player1, health: rand(50..200)}
+    @p2 = {name: player2, health: rand(50..200)}
   end
-
-  def health(player)
-
+  def hit(giver, taker)
+    giver[:power] = rand(5..25)
+    taker[:health] -= giver[:power]
+    puts "#{giver[:name]} hits #{taker[:name]} with a #{giver[:power]}"
+    stats
   end
-
-  def damage(player)
-    if player == @p1
-      other_player = @p2
-    else
-      other_player = @p1
-    end
-
-
-    player health -= player2 power
+  def both_alive
+    @p1[:health] > 0 && @p2[:health] > 0
   end
-
-  def Alive?
-    @p1_health <= || 0 @p2_health <= 0
-  end
-
-
   def stats
+    puts "#{@p1[:name]} health: #{@p1[:health]}"
+    puts "#{@p2[:name]} health: #{@p2[:health]}"
   end
-
   def fight
-    loop do
-      damage(@p1)
+    while both_alive
+      hit(@p1, @p2)
+      hit(@p2, @p1)
     end
+      puts "game over"
+      puts stats
   end
-
-  loop do
-    start fight
-    finnish is alive true
-    display stats
-  end
-
 end
-
-create two players each with random health and power
+game1 = Players.new('rev', 'sam')
+game1.fight
