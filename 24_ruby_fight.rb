@@ -33,10 +33,17 @@ class Player
   end
 
   def health(player)
-    
+
   end
 
   def damage(player)
+    if player == @p1
+      other_player = @p2
+    else
+      other_player = @p1
+    end
+
+
     player health -= player2 power
   end
 
@@ -49,6 +56,9 @@ class Player
   end
 
   def fight
+    loop do
+      damage(@p1)
+    end
   end
 
   loop do
