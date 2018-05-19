@@ -40,3 +40,8 @@ class Dictionary
     @words.length
   end
 end
+
+# dictionary = Dictionary.new
+# dictionary.add_word('ruby', 'A precious stone')
+# dictionary.total_words
+# dictionary.lookup('ruby')
