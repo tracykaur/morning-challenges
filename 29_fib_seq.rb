@@ -8,4 +8,4 @@ x = 0
   a.push(a[x] + a[x+1])
   x += 1
 end
-a
+puts a
