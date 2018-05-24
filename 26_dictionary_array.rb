@@ -22,7 +22,3 @@
 # Check your solution by running the tests:
 # ruby tests/26_dictionary_array_test.rb
 #
-
-class Dictionary
-  # Your code here
-end
