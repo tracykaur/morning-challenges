@@ -1,5 +1,5 @@
 # Reverse a string
-#
+# this is where code going to go
 # Write a method that will take a string
 # as input, and return a new string with
 # the same letters in reverse order.
@@ -15,5 +15,5 @@
 #
 
 def reverse (string)
-  # Your code here
+  string.reverse
 end
