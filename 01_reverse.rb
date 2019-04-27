@@ -15,5 +15,6 @@
 #
 
 def reverse (string)
-  # Your code here
+  gets.chomp = string
+  puts string.reverse
 end
