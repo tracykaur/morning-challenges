@@ -14,6 +14,8 @@
 # ruby tests/01_reverse_test.rb
 #
 
-def reverse (string)
-  # Your code here
+def reverse(string)
+string.reverse!
 end
+
+reverse("Hello")
