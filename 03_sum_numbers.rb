@@ -15,5 +15,13 @@
 #
 
 def sum_numbers (numbers)
+  total = 0
+  numbers.each do |x|
+    total += x
+  end
+  total
   # Your code here
 end
+
+array = [3,4,2,4]
+sum_numbers(array)
