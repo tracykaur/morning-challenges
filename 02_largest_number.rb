@@ -14,6 +14,10 @@
 # ruby tests/02_largest_number_test.rb
 #
 
-def largest_number (number_1, number_2)
-  # Your code here
+def sum_numbers (numbers)
+  add = 0
+  numbers.each do |num|
+    add += num
+  end
+  add
 end
