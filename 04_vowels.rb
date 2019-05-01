@@ -15,5 +15,7 @@
 #
 
 def vowels (string)
-  # Your code here
+  letters = ""
+  letters = string.scan(/a|A|e|E|u|U|i|I|o|O/)
+  letters
 end
