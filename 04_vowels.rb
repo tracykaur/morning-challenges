@@ -15,5 +15,12 @@
 #
 
 def vowels (string)
-  # Your code here
+  array = Array.new
+  string.each_char do |char|
+    char_1 = char.downcase
+    if char_1 == "a" || char_1 == "e" || char_1 == "i" || char_1 == "o" || char_1 == "u"
+      array.push(char)
+    end
+  end
+  return array
 end
