@@ -23,5 +23,9 @@
 #
 
 def ExesAndOhs(string)
-  # yo' co' here
+  integer = 0
+  string.each_char do |char|
+    integer += 1 if char.downcase == "x" || char.downcase == "o"
+  end
+  integer.even? ? true : false
 end
