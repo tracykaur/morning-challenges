@@ -21,3 +21,33 @@
 # water sell for $6, and cost $0.15 to make
 
 # print out the total profit for the orders you have
+
+time_to_class = 15
+complete_sentence = "I go to class by bus and it takes #{time_to_class} minutes."
+puts complete_sentence
+
+drinks_to_make = { party_parrot_cocktail: 3, party_parrot_water: 2, party_parrot_beer: 6 }
+
+order = ""
+until order == "no"
+  puts "What would you like to order?"
+  order = gets.chomp
+
+  case
+    when order == "cocktail"
+      drinks_to_make[:party_parrot_cocktail] += 1
+    when order == "water"
+      drinks_to_make[:party_parrot_water] += 1
+    when order == "beer"
+      drinks_to_make[:party_parrot_beer] += 1
+  end
+end
+puts "I will have to make:"
+drinks_to_make.each do |drink, amount|
+  puts "#{amount} orders of #{drink}"
+end
+profit = 0.0
+profit += drinks_to_make[:party_parrot_cocktail] * (22 - 8)
+profit += drinks_to_make[:party_parrot_water] * (6 - 0.15)
+profit += drinks_to_make[:party_parrot_beer] * (12 - 3)
+puts "And the total profit is: #{profit}"
