@@ -15,5 +15,6 @@
 #
 
 def reverse (string)
-  # Your code here
+  # Your code he
+  string.reverse
 end
