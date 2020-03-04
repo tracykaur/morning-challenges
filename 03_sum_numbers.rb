@@ -16,4 +16,7 @@
 
 def sum_numbers (numbers)
   # Your code here
+  sum = numbers.reduce :+
 end
+
+sum_numbers ([1,2,3])
