@@ -7,3 +7,17 @@
 # sequenceSum(2,6,2) === 12 // 2 + 4 + 6
 # sequenceSum(1,5,1) === 15 // 1 + 2 + 3 + 4 + 5
 # sequenceSum(1,5,3) === 5 // 1 + 4
+
+def sequenceSum(num1, num2, step)
+  sum = 0
+  while num2 >= num1
+    sum += num1
+    num1 += step
+  end
+  return sum
+end
+
+puts sequenceSum(2, 2, 2)
+puts sequenceSum(2, 6, 2)
+puts sequenceSum(1, 5, 1)
+puts sequenceSum(1, 5, 3)
