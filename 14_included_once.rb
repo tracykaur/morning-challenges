@@ -20,4 +20,14 @@
 
 def includedOnce (haystack, needle)
   # Your code here
+
+  (haystack.count(needle) == 1)? true : false
+  
+  # if (haystack.count(needle)) == 1
+  #   return true
+  # else
+  #   return false
+  # end
 end
+
+includedOnce(['hello','hi','hi'], 'hi')
