@@ -31,6 +31,11 @@
 #
 
 def firstNonRepeat (string)
-  # Your code here
-  # Whiteboard first!
+  splitted_string = string.split("")
+  splitted_string.each do |char|
+    if string.count(char) == 1
+      return char
+    end
+  end
+  return false
 end
