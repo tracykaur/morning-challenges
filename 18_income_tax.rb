@@ -15,5 +15,18 @@
 #
 
 def calculate_income_tax (income)
-  # Your code here!
+  hash = {}
+  case
+  when income <= 18200
+    tax = 0
+  when income > 18200 && income <= 37000
+    tax = (income - 18200) * 0.19
+  when income > 37000 && income <= 87000
+    tax = (income - 37000) * 0.325 + 3572
+  when income > 87000 && income <= 180000
+    tax = (income - 87000) * 0.37 + 19822
+  when income > 180000
+    tax = (income - 180000) * 0.45 + 54232
+  end
+  hash = { income: income, tax: tax, income_after_tax: (income - tax) }
 end
