@@ -18,6 +18,28 @@
 # ruby tests/14_included_once_test.rb
 #
 
+# def includedOnce (haystack, needle)
+#   index = 0
+#   count = 0
+#   haystack.length.times do
+#     if needle == haystack[index]
+#       count += 1
+#     end
+#     index += 1
+#   end
+#   if count == 1
+#     true
+#   else
+#     false
+#   end
+# end
+
 def includedOnce (haystack, needle)
-  # Your code here
+  haystack.count(needle) == 1 
 end
+
+# includedOnce(['hello','hi','hi'], 'hi')
+
+# includedOnce(['hello','hi','hey'], 'hi')
+
+# includedOnce(['hello','hey','hey'], 'hi')
