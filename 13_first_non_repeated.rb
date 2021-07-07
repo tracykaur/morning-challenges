@@ -11,7 +11,7 @@
 # indentation and be consistent in your decisions
 # (e.g. stick to single or double quotes)
 #
-# Difficulty: ~6/10 (Varies depending on solution. 
+# Difficulty: ~6/10 (Varies depending on solution.
 # The more optimised the solution, the more difficult
 # the algorithm.)
 #
@@ -31,6 +31,24 @@
 #
 
 def firstNonRepeat (string)
-  # Your code here
-  # Whiteboard first!
+  count = 0
+  string.length.times do
+    if string[count] == string[count + 1] || string[count] == string[count - 1]
+      count += 1
+    else
+      return string[count]
+    end
+  end
+  return false
 end
+
+#   while string[count] == string[count + 1] || string[count] == string[count - 1]
+#       count += 1
+#     if count == nil
+#       false
+#     end
+#   end
+#   string[count]
+# end
+
+# firstNonRepeat('aaaabbbdccc')
