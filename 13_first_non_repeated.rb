@@ -11,7 +11,7 @@
 # indentation and be consistent in your decisions
 # (e.g. stick to single or double quotes)
 #
-# Difficulty: ~6/10 (Varies depending on solution. 
+# Difficulty: ~6/10 (Varies depending on solution.
 # The more optimised the solution, the more difficult
 # the algorithm.)
 #
@@ -33,4 +33,15 @@
 def firstNonRepeat (string)
   # Your code here
   # Whiteboard first!
+  # =================================
+  string.each_char do |character|
+    if (string.count(character)) == 1
+      return character
+    end
+  end
+  # =================================
+  return false
 end
+
+
+puts firstNonRepeat("dddeefgggghhdddddddddddddddddddddddddddds")
