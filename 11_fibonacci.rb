@@ -24,5 +24,34 @@
 #
 
 def nthFibonacci (n)
-  # Your code here    
+  
+  fib_array = [0,1]
+  fib_array << fib_array[-2] + fib_array[-1] while fib_array.length <= n
+  fib_array[n]
+  # end
+
+  # fib_array = nil
+  # result
+  # if n == 0
+  #   return 0
+  # elsif n == 1
+  #   return 1
+  # else
+  #   return nthFibonacci(n - 1) + nthFibonacci(n - 2)
+  # end
+
+  # sum = 0
+  # first = 0
+  # second = 1
+
+
+  # while sum <= 100
+  #   sum = first + second
+  #   fib_array << sum
+  #   first = second
+  #   second = sum
+  # end
+  # puts fib_array.inspect
+
 end
+puts nthFibonacci(200001)
