@@ -21,5 +21,12 @@
 #Don't use any helpers other than .each
 #Try writing it on a whiteboard or paper first
 def in_array_advanced (needle, haystack, strict)
-  # Your code here
+  if strict == true
+    haystack.include?(needle)
+  else
+    haystack.each do |words|
+      words.downcase
+    end
+    haystack.include?(needle.downcase)
+  end
 end
