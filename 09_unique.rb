@@ -19,5 +19,15 @@
 #
 
 def unique (mylist)
-  # Your code here
+  hash = {}
+  result = []
+  count = 0
+  mylist.each do |x|
+    hash[mylist[count]] = x
+    count += 1
+  end
+  hash.each do |key, value|
+    result.push(value)
+  end
+  result
 end
