@@ -26,4 +26,40 @@
 # ...etc
 #
 
-# Your code here
+puts "\nThe readable version...\n"
+
+count = 0
+while count != 100
+  count += 1
+  if count % 3 == 0 && count % 5 == 0
+    puts "fizbuzz"
+  elsif count % 3 == 0
+    puts "fizz"
+  elsif count % 5 == 0
+    puts "buzz"
+  else
+    puts count
+  end
+end
+
+
+puts "\n\nThe one line (not so readable) version...\n"
+(1..100).each {|count| count % 3 == 0 && count % 5 == 0 ? (puts "FizzBuzz") : (count % 3 == 0 ? (puts "Fizz") : (count % 5 == 0 ? (puts "buzz") : (puts count)))}
+
+puts "\n\nThe one line shorter version...\n"
+
+puts (1..100).map {|count| (fb = [["fizz"][count % 3], ["Buzz"][count % 5]].compact.join).empty? ? count : fb}
+
+# def fizzbuzz(count)
+#   if count % 3 == 0 && count % 5 == 0
+#     return "fizzbuzz"
+#   elsif count % 3 == 0
+#     return "fizz"
+#   elsif count % 5 == 0
+#     return "buzz"
+#   else
+#     return count
+#   end
+#   # return count
+# end
+# fizzbuzz(3)
