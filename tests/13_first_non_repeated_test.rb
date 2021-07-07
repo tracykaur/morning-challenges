@@ -14,6 +14,11 @@ class FirstNonRepeatedTest < Test::Unit::TestCase
     assert_equal('e', firstNonRepeat('wwwhhhggge'))
   end
 
+  def test_last_letter2
+    string = 'a'*100000 + 'd'
+    assert_equal('d', firstNonRepeat(string))
+  end
+
   def test_no_repeats
     assert_equal(false, firstNonRepeat('wwwhhhggg'))
   end
